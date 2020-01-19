@@ -38,9 +38,9 @@ const getNewQuestion = (lastQuestionInfo) => {
     //jQuery selector selecting buttons and writing the display names of the former question
     $("#lastAnswerNutrient").text(lastQuestionInfo.nutrient.replace("_", " "))
     $("#lastAnswerFoodA").text(lastQuestionInfo.foodA)
-    $("#lastAnswerFoodAValue").text(lastQuestionInfo.foodAValue)
+    $("#lastAnswerFoodAValue").text(Math.round(lastQuestionInfo.foodAValue, 2))
     $("#lastAnswerFoodB").text(lastQuestionInfo.foodB)
-    $("#lastAnswerFoodBValue").text(lastQuestionInfo.foodBValue)
+    $("#lastAnswerFoodBValue").text(Math.round(lastQuestionInfo.foodBValue, 2))
 
     //unhides the "last answer" row
     $("#lastAnswerRow").show()

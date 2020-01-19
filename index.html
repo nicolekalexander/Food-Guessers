@@ -22,22 +22,40 @@
 
 <body>
     <div class="container">
-        <div class="jumbotron">
+        <div class="jumbotron bg-dark text-light">
             <div class="container">
                 <h1 class="display-4 text-center">Food Guessers</h1>
                 <p class="lead"></p>
             </div>
         </div>
-        <div class="row" id="lastAnswerRow">
+        <div class="row text-center" id="lastAnswerRow">
             <div class="col">
                 <div class="card">
-                    <div class="card-header text-center font-weight-bold">Last Answer</div>
+                    <div class="card-header text-center font-weight-bold">
+                        <h4>Last Answer</h4>
+                    </div>
                     <div class="card-body">
-                        <p id="lastAnswerNutrient"></p>
-                        <p id="lastAnswerFoodA"></p>
-                        <p id="lastAnswerFoodAValue"></p>
-                        <p id="lastAnswerFoodB"></p>
-                        <p id="lastAnswerFoodBValue"></p>
+                        <div class="row">
+                            <div class="col">
+                                <p id="lastAnswerNutrient"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p id="lastAnswerFoodA"></p>
+                            </div>
+                            <div class="col">
+                                <p id="lastAnswerFoodAValue"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p id="lastAnswerFoodB"></p>
+                            </div>
+                            <div class="col">
+                                <p id="lastAnswerFoodBValue"></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -63,6 +81,13 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <p>
+                    Data from <a href="https://healthdata.gov/dataset/food-pedia">Food-a-pedia</a>
+                </p>
             </div>
         </div>
     </div>
