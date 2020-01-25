@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/sandstone/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-ABdnjefqVzESm+f9z9hcqx2cvwvDNjfrwfW5Le9138qHCMGlNmWawyn/tt4jR4ba" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/journal/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -17,6 +16,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+        <style>
+        #food0{
+            border: 0;
+        }
+        </style>
     <title>Food Guessers</title>
 </head>
 
@@ -67,7 +71,7 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="text-center">Which one has more... </h4>
+                        <h4 class="text-center">Which one has more...</h4>
                         <h3 id="nutrient" class="text-center font-weight-bold"></h3>
                     </div>
                     <div class="card-body">
@@ -79,7 +83,7 @@
                                 <button id="foodB" class="btn btn-primary btn-lg"></button>
                             </div>
                             <div class="col-md my-2">
-                                <button id="food0" class="btn btn-info btn-lg">Neither</button>
+                                <button id="food0" class="btn btn-info btn-lg bg-secondary">Neither</button>
                             </div>
                         </div>
                     </div>
