@@ -1,5 +1,6 @@
-.brain-part{
-    color: rgb(145, 107, 177);
-    /* background-color: rgb(151, 114, 175); */
-    overflow-wrap: normal; 
+.bg-cartoon-foods {
+    background: url(https://media.istockphoto.com/vectors/food-ingredients-and-dishes-icons-vector-id1129610282?k=6&m=1129610282&s=612x612&w=0&h=iRYlBaDJ4dL8bmc1csX4pdKOKC0etyfFU21ONJNKais=); 
+    
+    background-position: center; 
 }
+
