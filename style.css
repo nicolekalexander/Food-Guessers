@@ -10,16 +10,22 @@
     display: inline-block;
     border-radius: 100px;
 }
-
+body {
+    background-color: rgb(255, 213, 168);
+}
 
 @media(max-width: 700px){
     .bg-cartoon-foods {
         background: url(images/foods.jpg);
         padding: 150px 10px;
         background-position: center;
-
+        
     }
-    .container {
+    
+    .app-container {
+        width: 100%;
+        margin: 0px;
         padding: 0px;
+        overflow-x: hidden;
     }
 }
