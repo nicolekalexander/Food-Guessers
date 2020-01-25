@@ -1,6 +1,25 @@
 .bg-cartoon-foods {
-    background: url(https://media.istockphoto.com/vectors/food-ingredients-and-dishes-icons-vector-id1129610282?k=6&m=1129610282&s=612x612&w=0&h=iRYlBaDJ4dL8bmc1csX4pdKOKC0etyfFU21ONJNKais=); 
-    
+    background: url(images/foods.jpg); 
+    background-size: cover;
     background-position: center; 
+    padding: 200px 10px; 
 }
 
+.bg-cartoon-foods span{
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 100px;
+}
+
+
+@media(max-width: 700px){
+    .bg-cartoon-foods {
+        background: url(images/foods.jpg);
+        padding: 150px 10px;
+        background-position: center;
+
+    }
+    .container {
+        padding: 0px;
+    }
+}

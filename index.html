@@ -17,34 +17,29 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
         <style>
-        #food0{
+        #food0 {
             border: 0;
         }
+
         </style>
     <title>Food Guessers</title>
 </head>
 
-<body>
-    
-    <img src="images/food-finds.jpeg" alt="Image of Food" class="w-100 d-md-none">
-    <img src="images/food-finds-computer1.jpeg" alt="Image of Food" class="w-100 d-none d-md-block">
+<body class="bg-color">
     <div class="container">
-        <div class="jumbotron mx-0 bg-dark">
-            <div class="container">
-                <h1 class="display-4 text-center">Food Guessers</h1>
-                <p class="lead"></p>
-            </div>
+        <div class="bg-cartoon-foods text-center">
+                <span class="display-4 bg-white">Which food has more...</span>
         </div>
         <div class="row text-center" id="lastAnswerRow">
             <div class="col">
                 <div class="card">
                     <div class="card-header text-center font-weight-bold">
-                        <h4>Last Answer</h4>
+                        <h4>Answer</h4>
                     </div>
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                <p id="lastAnswerNutrient"></p>
+                                <p id="lastAnswerNutrient"> <span class="badge badge-secondary"></span></p>
                             </div>
                         </div>
                         <div class="row">
@@ -71,8 +66,7 @@
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="text-center">Which one has more...</h4>
-                        <h3 id="nutrient" class="text-center font-weight-bold"></h3>
+                        <h1 id="nutrient" class="text-center font-weight-light"></h1>
                     </div>
                     <div class="card-body">
                         <div class="row text-center">
@@ -83,7 +77,7 @@
                                 <button id="foodB" class="btn btn-primary btn-lg"></button>
                             </div>
                             <div class="col-md my-2">
-                                <button id="food0" class="btn btn-info btn-lg bg-secondary">Neither</button>
+                                <button id="food0" class="btn btn-info btn-lg btn-secondary">Neither</button>
                             </div>
                         </div>
                     </div>

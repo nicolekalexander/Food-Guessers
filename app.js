@@ -25,7 +25,7 @@ const makeQuestion = () => {
     //jQuery selectors selecting buttons and writing the display names of the random foods
     $("#foodA").text(randomFoodA.Display_Name)
     $("#foodB").text(randomFoodB.Display_Name)
-    $("#nutrient").text(randomNutrient.replace("_", " "))
+    $("#nutrient").text(randomNutrient.replace("_", " ") + "?")
 
     //removes all event handlers in order to prevent over handling of events
     $("#foodA, #foodB, #food0").off()
