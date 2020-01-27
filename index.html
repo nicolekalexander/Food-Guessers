@@ -16,11 +16,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-        <style>
+    <style>
         #food0 {
             border: 0;
         }
-        
     </style>
     <title>Food Guessers</title>
 </head>
@@ -28,39 +27,41 @@
 <body class="bg-color">
     <div class="app-container">
         <div class="bg-cartoon-foods text-center">
-            <span class="bg-white text-danger">
-                <p class="display-4">Which food has more...</p> 
-                <p id="nutrient" class="text-center text-danger display-3"></p>
-                <button id="foodA" class="btn btn-danger btn-lg m-2"></button>
-                <button id="foodB" class="btn btn-danger btn-lg m-2"></button>
-                <div id="lastAnswerRow">
-                    <div class="text-center font-weight-bold">
-                        <h4>Answer</h4>
+            <span id="lastAnswerRow" class="bg-white text-danger mb-4">
+                <div class="text-center font-weight-bold">
+                    <h4 class="text-danger">Answer</h4>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col">
+                            <p id="lastAnswerNutrient"> <span class="badge badge-secondary"></span></p>
+                        </div>
                     </div>
-                    <div>
-                        <div class="row">
-                            <div class="col">
-                                <p id="lastAnswerNutrient"> <span class="badge badge-secondary"></span></p>
-                            </div>
+                    <div class="row">
+                        <div class="col">
+                            <p id="lastAnswerFoodA"></p>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <p id="lastAnswerFoodA"></p>
-                            </div>
-                            <div class="col">
-                                <p id="lastAnswerFoodAValue"></p>
-                            </div>
+                        <div class="col">
+                            <p id="lastAnswerFoodAValue"></p>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <p id="lastAnswerFoodB"></p>
-                            </div>
-                            <div class="col">
-                                <p id="lastAnswerFoodBValue"></p>
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p id="lastAnswerFoodB"></p>
+                        </div>
+                        <div class="col">
+                            <p id="lastAnswerFoodBValue"></p>
                         </div>
                     </div>
                 </div>
+
+            </span>
+
+            <span class="bg-white text-danger">
+                <p class="display-4">Which food has more...</p>
+                <p id="nutrient" class="text-center text-danger display-3"></p>
+                <button id="foodA" class="btn btn-danger btn-lg m-2"></button>
+                <button id="foodB" class="btn btn-danger btn-lg m-2"></button>
             </span>
         </div>
         <div class="row text-center">
