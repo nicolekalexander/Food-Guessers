@@ -20,23 +20,24 @@
         #food0 {
             border: 0;
         }
-
-        </style>
+        
+    </style>
     <title>Food Guessers</title>
 </head>
 
 <body class="bg-color">
     <div class="app-container">
         <div class="bg-cartoon-foods text-center">
-                <span class="display-4 bg-white text-danger">Which food has more...</span>
-        </div>
-        <div class="row text-center" id="lastAnswerRow">
-            <div class="col">
-                <div class="card">
-                    <div class="card-header text-center font-weight-bold">
+            <span class="bg-white text-danger">
+                <p class="display-4">Which food has more...</p> 
+                <p id="nutrient" class="text-center text-danger display-3"></p>
+                <button id="foodA" class="btn btn-danger btn-lg m-2"></button>
+                <button id="foodB" class="btn btn-danger btn-lg m-2"></button>
+                <div id="lastAnswerRow">
+                    <div class="text-center font-weight-bold">
                         <h4>Answer</h4>
                     </div>
-                    <div class="card-body">
+                    <div>
                         <div class="row">
                             <div class="col">
                                 <p id="lastAnswerNutrient"> <span class="badge badge-secondary"></span></p>
@@ -60,21 +61,22 @@
                         </div>
                     </div>
                 </div>
+            </span>
+        </div>
+        <div class="row text-center">
+            <div class="col">
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <div class="card">
                     <div class="card-header">
-                        <h1 id="nutrient" class="text-center font-weight-bold text-danger"></h1>
                     </div>
                     <div class="card-body">
                         <div class="row text-center">
                             <div class="col-md my-2">
-                                <button id="foodA" class="btn btn-danger btn-lg"></button>
                             </div>
                             <div class="col-md my-2">
-                                <button id="foodB" class="btn btn-danger btn-lg"></button>
                             </div>
                         </div>
                     </div>
