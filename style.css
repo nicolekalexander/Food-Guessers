@@ -1,5 +1,47 @@
-.brain-part{
-    color: rgb(145, 107, 177);
-    /* background-color: rgb(151, 114, 175); */
-    overflow-wrap: normal; 
+.bg-cartoon-foods {
+    background: url(images/foods-with-gap.jpg); 
+    background-size: cover;
+    background-position: center; 
+    padding: 200px 10px; 
+}
+
+.bg-cartoon-foods span{
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 10px;
+}
+body {
+    background-color: rgb(255, 213, 168);
+}
+
+#lastAnswerRow {
+    color: rgb(204, 13, 179);
+    font-family: "Amatic SC", sans-serif;
+}
+#nutrient {
+    font-family: "Open Sans", sans-serif;
+}
+.AnswerPortion {
+    color: rgb(204, 13, 179);
+    font-family: 
+}
+.display-4 {
+    font-family: "Playfair Display", serif;    
+}
+
+
+@media(max-width: 700px){
+    .bg-cartoon-foods {
+        background: url(images/foods.jpg);
+        padding: 150px 10px;
+        background-position: center;
+        
+    }
+    
+    .app-container {
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
 }

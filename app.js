@@ -7,12 +7,14 @@ const makeQuestion = () => {
 
     //variables storing random numbers generated from foodA, foodB, and nutrient arrays
     const randomNutrient = nutrients[randomNumberNutrient]
-    const randomFoodA = foods[randomNumberFoodA]
-    const randomFoodB = foods[randomNumberFoodB]
+    const foodA = foods[randomNumberFoodA]
+    const foodB = foods[randomNumberFoodB]
 
     //variables storing valued amounts of the random nutrients generated for each food
-    const foodAValue = randomFoodA[randomNutrient]
-    const foodBValue = randomFoodB[randomNutrient]
+    const foodAValue = foodA[randomNutrient]
+    const foodBValue = foodB[randomNutrient]
+    const foodAName = Math.round(foodA.Portion_Amount, 2) + " " + foodA.Portion_Display_Name + " of " + foodA.Display_Name
+    const foodBName = Math.round(foodB.Portion_Amount, 2) + " " + foodB.Portion_Display_Name + " of " + foodB.Display_Name
 
     //if statement that calls make question if foodA or foodB value is 0
     if (foodAValue == 0 || foodBValue == 0){
@@ -23,9 +25,9 @@ const makeQuestion = () => {
     }
 
     //jQuery selectors selecting buttons and writing the display names of the random foods
-    $("#foodA").text(randomFoodA.Display_Name)
-    $("#foodB").text(randomFoodB.Display_Name)
-    $("#nutrient").text(randomNutrient.replace("_", " "))
+    $("#foodA").text(foodAName)
+    $("#foodB").text(foodBName)
+    $("#nutrient").text(randomNutrient.replace("_", " ") + "?")
 
     //removes all event handlers in order to prevent over handling of events
     $("#foodA, #foodB, #food0").off()
@@ -35,9 +37,9 @@ const makeQuestion = () => {
     $("#foodA, #foodB, #food0").on("click" , () => {
         getNewQuestion({
             "nutrient": randomNutrient,
-            "foodA": randomFoodA.Display_Name,
+            "foodA": foodAName,
             "foodAValue": foodAValue,
-            "foodB": randomFoodB.Display_Name,
+            "foodB": foodBName,
             "foodBValue": foodBValue
         })
     })
@@ -46,12 +48,22 @@ const makeQuestion = () => {
 //function that displays info from last question, and calls the makeQuestion function
 const getNewQuestion = (lastQuestionInfo) => {
     
+let whichHasMore = " "
+if (lastQuestionInfo.foodAValue > lastQuestionInfo.foodBValue) {
+    whichHasMore = lastQuestionInfo.foodA 
+} else if (lastQuestionInfo.foodAValue < lastQuestionInfo.foodBValue) {
+    whichHasMore = lastQuestionInfo.foodB 
+} else {
+    whichHasMore = "Neither"
+}
+
     //jQuery selector selecting buttons and writing the display names of the former question
-    $("#lastAnswerNutrient").text(lastQuestionInfo.nutrient.replace("_", " "))
+    $("#lastAnswerNutrient").text(whichHasMore + " has more " + lastQuestionInfo.nutrient.replace("_", " "))
     $("#lastAnswerFoodA").text(lastQuestionInfo.foodA)
     $("#lastAnswerFoodAValue").text(Math.round(lastQuestionInfo.foodAValue, 2))
     $("#lastAnswerFoodB").text(lastQuestionInfo.foodB)
     $("#lastAnswerFoodBValue").text(Math.round(lastQuestionInfo.foodBValue, 2))
+    
 
     //unhides the "last answer" row
     $("#lastAnswerRow").show()
