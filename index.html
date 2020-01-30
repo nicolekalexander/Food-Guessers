@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/minty/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display:500i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Oswald&display=swap" rel="stylesheet">
@@ -30,7 +31,7 @@
 <body class="bg-color">
     <div class="app-container">
         <div class="bg-cartoon-foods text-center">
-            <span id="lastAnswerRow" class="bg-white mb-4">
+            <span id="lastAnswerRow" class="bg-white mb-4 animated zoomIn">
                 <div class="text-center font-weight-bold">
                     <h4 class="AnswerPortion">Answer</h4>
                 </div>
@@ -61,8 +62,8 @@
             </span>
 
             <span class="bg-white text-success">
-                <p class="display-4">Which food has more...</p>
-                <p id="nutrient" class="text-center text-danger display-3"></p>
+                <p class="display-4 animated bounceInDown">Which food has more...</p>
+                <p id="nutrient" class="text-center text-danger display-3 animated bounceInUp delay-1s"></p>
                 <button id="foodA" class="btn btn-info btn-lg m-2"></button>
                 <button id="foodB" class="btn btn-info btn-lg m-2"></button>
             </span>
