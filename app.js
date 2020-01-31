@@ -65,8 +65,28 @@ if (lastQuestionInfo.foodAValue > lastQuestionInfo.foodBValue) {
     $("#lastAnswerFoodBValue").text(Math.round(lastQuestionInfo.foodBValue, 2))
     
 
-    //unhides the "last answer" row
+    //question fades away (nutrient, foodA, and foodB) 
+    $("#nutrient").addClass("fadeOut")
+    $("#foodA").addClass("fadeOut")
+    $("#foodB").addClass("fadeOut")
+
+    //unhides the "answer" row
     $("#lastAnswerRow").show()
+    $("#lastAnswerRow").addClass("bounceIn")
+    
+    setTimeout(function(){
+        $("#lastAnswerRow").removeClass("bounceIn")
+        $("#nutrient").removeClass("fadeOut")
+        $("#foodA").removeClass("fadeOut")
+        $("#foodB").removeClass("fadeOut")
+     }, 1000);
+
+    //question (nutrient, foodA, foodB) fades in again
+    setTimeout(function(){
+        $("#nutrient").addClass("fadeIn")
+        $("#foodA").addClass("fadeIn")
+        $("#foodB").addClass("fadeIn")
+    }, 4000);
     
     //calls makeQuestion function to generate new question
     makeQuestion()
@@ -75,7 +95,7 @@ if (lastQuestionInfo.foodAValue > lastQuestionInfo.foodBValue) {
 ////////////////////////////////////////////////////////////////////////////////////////////
 //any code written after this runs once when user arrives, because it's in the global scope 
 
-//initially hides "last answer" row
+//initially hides "answer" row
 $("#lastAnswerRow").hide()
 
 //generates first question

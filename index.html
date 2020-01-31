@@ -31,42 +31,48 @@
 <body class="bg-color">
     <div class="app-container">
         <div class="bg-cartoon-foods text-center">
-            <span id="lastAnswerRow" class="bg-white mb-4 animated zoomIn">
-                <div class="text-center font-weight-bold">
-                    <h4 class="AnswerPortion">Answer</h4>
+            <div class="row">
+                <div class="col">
+                    <span id="lastAnswerRow" class="bg-white mb-4 animated">
+                        <div class="text-center font-weight-bold">
+                            <h4 class="AnswerPortion">Answer</h4>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="col">
+                                    <p id="lastAnswerNutrient"> <span class="badge badge-secondary"></span></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p id="lastAnswerFoodA"></p>
+                                </div>
+                                <div class="col">
+                                    <p id="lastAnswerFoodAValue"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p id="lastAnswerFoodB"></p>
+                                </div>
+                                <div class="col">
+                                    <p id="lastAnswerFoodBValue"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
                 </div>
-                <div>
-                    <div class="row">
-                        <div class="col">
-                            <p id="lastAnswerNutrient"> <span class="badge badge-secondary"></span></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p id="lastAnswerFoodA"></p>
-                        </div>
-                        <div class="col">
-                            <p id="lastAnswerFoodAValue"></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p id="lastAnswerFoodB"></p>
-                        </div>
-                        <div class="col">
-                            <p id="lastAnswerFoodBValue"></p>
-                        </div>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <span class="bg-white text-success">
+                        <p class="display-4">Which food has more...</p>
+                        <p id="nutrient" class="text-center text-danger display-4 animated"></p>
+                        <button id="foodA" class="btn btn-info btn-lg m-2 animated"></button>
+                        <button id="foodB" class="btn btn-info btn-lg m-2 animated"></button>
+                    </span>
                 </div>
-
-            </span>
-
-            <span class="bg-white text-success">
-                <p class="display-4 animated bounceInDown">Which food has more...</p>
-                <p id="nutrient" class="text-center text-danger display-3 animated bounceInUp delay-1s"></p>
-                <button id="foodA" class="btn btn-info btn-lg m-2"></button>
-                <button id="foodB" class="btn btn-info btn-lg m-2"></button>
-            </span>
+            </div>
         </div>
 
             <div class="col text-center">
