@@ -57,26 +57,28 @@ const getNewQuestion = (lastQuestionInfo) => {
         whichHasMore = "Neither"
     }
 
-    //jQuery selector selecting buttons and writing the display names of the former question
-    $("#lastAnswerNutrient").text(whichHasMore + " has more " + lastQuestionInfo.nutrient.replace("_", " "))
-    $("#lastAnswerFoodA").text(lastQuestionInfo.foodA)
-    $("#lastAnswerFoodAValue").text(Math.round(lastQuestionInfo.foodAValue, 2))
-    $("#lastAnswerFoodB").text(lastQuestionInfo.foodB)
-    $("#lastAnswerFoodBValue").text(Math.round(lastQuestionInfo.foodBValue, 2))
-
-
-    //question fades away (nutrient, foodA, and foodB) 
+    //question and answer fades away (nutrient, foodA, and foodB) 
     $("#nutrient").addClass("fadeOut")
     $("#foodA").addClass("fadeOut")
     $("#foodB").addClass("fadeOut")
-
-
+    $("#lastAnswerRow").addClass("bounceOut")
+    
+    
+    
     //after 1 second
     setTimeout(function () {
-
+        
         //unhides the "answer" row
         $("#lastAnswerRow").show()
+        $("#lastAnswerRow").removeClass("bounceOut")
         $("#lastAnswerRow").addClass("bounceIn")
+
+        //jQuery selector selecting buttons and writing the display names of the former question
+        $("#lastAnswerNutrient").text(whichHasMore + " has more " + lastQuestionInfo.nutrient.replace("_", " "))
+        $("#lastAnswerFoodA").text(lastQuestionInfo.foodA)
+        $("#lastAnswerFoodAValue").text(Math.round(lastQuestionInfo.foodAValue, 2))
+        $("#lastAnswerFoodB").text(lastQuestionInfo.foodB)
+        $("#lastAnswerFoodBValue").text(Math.round(lastQuestionInfo.foodBValue, 2))
 
         //generate and display new question
         makeQuestion()
