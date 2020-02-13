@@ -16,13 +16,26 @@ body {
 
 #lastAnswerRow {
     color: rgb(204, 13, 179);
-    font-family: "Amatic SC", sans-serif;
+    font-family: "Lemonada", cursive;
 }
+#lastAnswerFoodA {
+    color:rgb(108, 195, 213);
+}
+#lastAnswerFoodB {
+    color:rgb(241, 67, 96);
+}
+
+#lastAnswerNutrient {
+    font-family: "Acme", sans-serif;
+    color: rgb(255, 120, 81);
+}
+
 #nutrient {
     font-family: "Open Sans", sans-serif;
 }
 .AnswerPortion {
-    color: rgb(204, 13, 179); 
+    color: rgb(86, 204, 157);
+    font-family: "Sriracha", cursive;
 }
 
 .display-4 {

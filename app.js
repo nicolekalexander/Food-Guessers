@@ -1,9 +1,9 @@
 //function that creates a new question
 const makeQuestion = () => {
     //variables storing random number generators for foodA, foodB, and nutrient arrays
-    const randomNumberFoodA = Math.floor(Math.random()*2014)
-    const randomNumberFoodB = Math.floor(Math.random()*2014)
-    const randomNumberNutrient = Math.floor(Math.random()*3)
+    const randomNumberFoodA = Math.floor(Math.random() * 2014)
+    const randomNumberFoodB = Math.floor(Math.random() * 2014)
+    const randomNumberNutrient = Math.floor(Math.random() * 3)
 
     //variables storing random numbers generated from foodA, foodB, and nutrient arrays
     const randomNutrient = nutrients[randomNumberNutrient]
@@ -17,7 +17,7 @@ const makeQuestion = () => {
     const foodBName = Math.round(foodB.Portion_Amount, 2) + " " + foodB.Portion_Display_Name + " of " + foodB.Display_Name
 
     //if statement that calls make question if foodA or foodB value is 0
-    if (foodAValue == 0 || foodBValue == 0){
+    if (foodAValue == 0 || foodBValue == 0) {
         //make new question
         makeQuestion()
         //exit this function call
@@ -34,7 +34,7 @@ const makeQuestion = () => {
 
     //jQuery selector selecting buttons and assigning onclick event listener function 
     //when you click the selected buttons, the getNewQuestion function happens
-    $("#foodA, #foodB, #food0").on("click" , () => {
+    $("#foodA, #foodB, #food0").on("click", () => {
         getNewQuestion({
             "nutrient": randomNutrient,
             "foodA": foodAName,
@@ -47,23 +47,23 @@ const makeQuestion = () => {
 
 //function that displays info from last question, and calls the makeQuestion function
 const getNewQuestion = (lastQuestionInfo) => {
-    
-let whichHasMore = " "
-if (lastQuestionInfo.foodAValue > lastQuestionInfo.foodBValue) {
-    whichHasMore = lastQuestionInfo.foodA 
-} else if (lastQuestionInfo.foodAValue < lastQuestionInfo.foodBValue) {
-    whichHasMore = lastQuestionInfo.foodB 
-} else {
-    whichHasMore = "Neither"
-}
+
+    let whichHasMore = " "
+    if (lastQuestionInfo.foodAValue > lastQuestionInfo.foodBValue) {
+        whichHasMore = lastQuestionInfo.foodA
+    } else if (lastQuestionInfo.foodAValue < lastQuestionInfo.foodBValue) {
+        whichHasMore = lastQuestionInfo.foodB
+    } else {
+        whichHasMore = "Neither"
+    }
 
     //jQuery selector selecting buttons and writing the display names of the former question
     $("#lastAnswerNutrient").text(whichHasMore + " has more " + lastQuestionInfo.nutrient.replace("_", " "))
     $("#lastAnswerFoodA").text(lastQuestionInfo.foodA)
-    $("#lastAnswerFoodAValue").text(Math.round(lastQuestionInfo.foodAValue, 2))
+    $("#lastAnswerFoodAValue").text(Math.round(lastQuestionInfo.foodAValue, 2) + " g")
     $("#lastAnswerFoodB").text(lastQuestionInfo.foodB)
-    $("#lastAnswerFoodBValue").text(Math.round(lastQuestionInfo.foodBValue, 2))
-    
+    $("#lastAnswerFoodBValue").text(Math.round(lastQuestionInfo.foodBValue, 2) + " g")
+
 
     //question fades away (nutrient, foodA, and foodB) 
     $("#nutrient").addClass("fadeOut")
@@ -73,21 +73,21 @@ if (lastQuestionInfo.foodAValue > lastQuestionInfo.foodBValue) {
     //unhides the "answer" row
     $("#lastAnswerRow").show()
     $("#lastAnswerRow").addClass("bounceIn")
-    
-    setTimeout(function(){
+
+    setTimeout(function () {
         $("#lastAnswerRow").removeClass("bounceIn")
         $("#nutrient").removeClass("fadeOut")
         $("#foodA").removeClass("fadeOut")
         $("#foodB").removeClass("fadeOut")
-     }, 1000);
+    }, 1000);
 
     //question (nutrient, foodA, foodB) fades in again
-    setTimeout(function(){
+    setTimeout(function () {
         $("#nutrient").addClass("fadeIn")
         $("#foodA").addClass("fadeIn")
         $("#foodB").addClass("fadeIn")
     }, 4000);
-    
+
     //calls makeQuestion function to generate new question
     makeQuestion()
 }
