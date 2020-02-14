@@ -36,6 +36,17 @@
         <div class="bg-cartoon-foods text-center">
             <div class="row">
                 <div class="col">
+                    <span class="bg-white text-success">
+                        <p class="display-4">Which food has more...</p>
+                        <p id="nutrient" class="text-center text-danger display-4 animated"></p>
+                        <button id="foodA" class="btn btn-info btn-lg m-2 animated"></button>
+                        <button id="foodB" class="btn btn-info btn-lg m-2 animated"></button>
+                    </span>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
                     <span id="lastAnswerRow" class="bg-white mb-4 animated">
                         <div class="text-center font-weight-bold">
                             <h4 class="AnswerPortion">Answer</h4>
@@ -66,24 +77,14 @@
                     </span>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <span class="bg-white text-success">
-                        <p class="display-4">Which food has more...</p>
-                        <p id="nutrient" class="text-center text-danger display-4 animated"></p>
-                        <button id="foodA" class="btn btn-info btn-lg m-2 animated"></button>
-                        <button id="foodB" class="btn btn-info btn-lg m-2 animated"></button>
-                    </span>
-                </div>
-            </div>
         </div>
 
-            <div class="col text-center">
-                <p class="footer text-dark">
-                    Data from <a href="https://healthdata.gov/dataset/food-pedia" class="text-success">Food-a-pedia</a>
-                </p>
-            </div>
+        <div class="col text-center">
+            <p class="footer text-dark">
+                Data from <a href="https://healthdata.gov/dataset/food-pedia" class="text-success">Food-a-pedia</a>
+            </p>
         </div>
+    </div>
     </div>
     <script src="constants.js"></script>
     <script src="app.js"></script>

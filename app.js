@@ -13,8 +13,8 @@ const makeQuestion = () => {
     //variables storing valued amounts of the random nutrients generated for each food
     const foodAValue = foodA[randomNutrient]
     const foodBValue = foodB[randomNutrient]
-    const foodAName = Math.round(foodA.Portion_Amount, 2 * 100) / 100 + " " + foodA.Portion_Display_Name + " of " + foodA.Display_Name
-    const foodBName = Math.round(foodB.Portion_Amount, 2 * 100) / 100 + " " + foodB.Portion_Display_Name + " of " + foodB.Display_Name
+    const foodAName = (Math.round(foodA.Portion_Amount * 100, 2)) / 100 + " " + foodA.Portion_Display_Name + " of " + foodA.Display_Name
+    const foodBName = (Math.round(foodB.Portion_Amount * 100, 2)) / 100 + " " + foodB.Portion_Display_Name + " of " + foodB.Display_Name
 
     //if statement that calls make question if foodA or foodB value is 0
     if (foodAValue == 0 || foodBValue == 0) {
@@ -61,7 +61,7 @@ const getNewQuestion = (lastQuestionInfo) => {
     $("#nutrient").addClass("fadeOut")
     $("#foodA").addClass("fadeOut")
     $("#foodB").addClass("fadeOut")
-    $("#lastAnswerRow").addClass("bounceOut")
+    $("#lastAnswerRow").hide()
     
     
     
@@ -76,9 +76,9 @@ const getNewQuestion = (lastQuestionInfo) => {
         //jQuery selector selecting buttons and writing the display names of the former question
         $("#lastAnswerNutrient").text(whichHasMore + " has more " + lastQuestionInfo.nutrient.replace("_", " "))
         $("#lastAnswerFoodA").text(lastQuestionInfo.foodA)
-        $("#lastAnswerFoodAValue").text(Math.round(lastQuestionInfo.foodAValue, 2))
+        $("#lastAnswerFoodAValue").text(Math.round(lastQuestionInfo.foodAValue, 2) + (lastQuestionInfo.nutrient == "Calories"?" cal":" g"))
         $("#lastAnswerFoodB").text(lastQuestionInfo.foodB)
-        $("#lastAnswerFoodBValue").text(Math.round(lastQuestionInfo.foodBValue, 2))
+        $("#lastAnswerFoodBValue").text(Math.round(lastQuestionInfo.foodBValue, 2) + (lastQuestionInfo.nutrient == "Calories"?" cal":" g"))
 
         //generate and display new question
         makeQuestion()
