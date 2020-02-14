@@ -17,29 +17,38 @@ body {
 #lastAnswerRow {
     color: rgb(204, 13, 179);
     font-family: "Lemonada", cursive;
+    font-weight: bold;
 }
 #lastAnswerFoodA {
     color:rgb(108, 195, 213);
+    font-family: "Monsterrat", sans-serif;
+    font-weight: lighter;
 }
 #lastAnswerFoodB {
     color:rgb(241, 67, 96);
+    font-family: "Monsterrat", sans-serif;
+    font-weight: lighter;
 }
 
 #lastAnswerNutrient {
-    font-family: "Acme", sans-serif;
+    font-family: "Monsterrat", sans-serif;
+    font-weight: lighter;
     color: rgb(255, 120, 81);
 }
 
 #nutrient {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Monsterrat", sans-serif;
+    font-weight: lighter;
 }
 .AnswerPortion {
     color: rgb(86, 204, 157);
-    font-family: "Sriracha", cursive;
+    font-family: "Lemonada", cursive;
 }
 
 .display-4 {
-    font-family: "Playfair Display", serif;    
+    font-family: "Lemonada", cursive;
+    font-weight: bold;
+    font-size: 45px;    
 }
 
 
