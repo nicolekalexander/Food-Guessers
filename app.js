@@ -13,8 +13,8 @@ const makeQuestion = () => {
     //variables storing valued amounts of the random nutrients generated for each food
     const foodAValue = foodA[randomNutrient]
     const foodBValue = foodB[randomNutrient]
-    const foodAName = Math.round(foodA.Portion_Amount, 2) + " " + foodA.Portion_Display_Name + " of " + foodA.Display_Name
-    const foodBName = Math.round(foodB.Portion_Amount, 2) + " " + foodB.Portion_Display_Name + " of " + foodB.Display_Name
+    const foodAName = Math.round(foodA.Portion_Amount, 2 * 100) / 100 + " " + foodA.Portion_Display_Name + " of " + foodA.Display_Name
+    const foodBName = Math.round(foodB.Portion_Amount, 2 * 100) / 100 + " " + foodB.Portion_Display_Name + " of " + foodB.Display_Name
 
     //if statement that calls make question if foodA or foodB value is 0
     if (foodAValue == 0 || foodBValue == 0) {
