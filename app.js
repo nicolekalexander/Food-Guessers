@@ -1,5 +1,16 @@
+//initially hides "answer" row
+$(".bg-cartoon-foods").addClass('bounceIn')
+$("#lastAnswerRow").hide()
+
 //function that creates a new question
 const makeQuestion = () => {
+    $("#questionRow").show()
+    $("#lastAnswerRow").hide()
+    $("#lastAnswerRow").removeClass("bounceOut")
+    $("#questionRow").removeClass('bounceOut')
+    $("#questionRow").addClass("bounceIn")
+    $("#lastAnswerRow").addClass("animated")
+
     //variables storing random number generators for foodA, foodB, and nutrient arrays
     const randomNumberFoodA = Math.floor(Math.random() * 2014)
     const randomNumberFoodB = Math.floor(Math.random() * 2014)
@@ -35,7 +46,7 @@ const makeQuestion = () => {
     //jQuery selector selecting buttons and assigning onclick event listener function 
     //when you click the selected buttons, the getNewQuestion function happens
     $("#foodA, #foodB, #food0").on("click", () => {
-        getNewQuestion({
+        getAnswer({
             "nutrient": randomNutrient,
             "foodA": foodAName,
             "foodAValue": foodAValue,
@@ -46,7 +57,7 @@ const makeQuestion = () => {
 }
 
 //function that displays info from last question, and calls the makeQuestion function
-const getNewQuestion = (lastQuestionInfo) => {
+const getAnswer = (lastQuestionInfo) => {
 
     let whichHasMore = " "
     if (parseFloat(lastQuestionInfo.foodAValue) > parseFloat(lastQuestionInfo.foodBValue)) {
@@ -58,46 +69,24 @@ const getNewQuestion = (lastQuestionInfo) => {
     }
 
     //question and answer fades away (nutrient, foodA, and foodB) 
-    $("#nutrient").addClass("fadeOut")
-    $("#foodA").addClass("fadeOut")
-    $("#foodB").addClass("fadeOut")
-    $("#lastAnswerRow").hide()
-
-
-
-    //after 1 second
+    $("#questionRow").addClass('bounceOut')
+    
+    //after 0.6 second
     setTimeout(function () {
-
+        
         //unhides the "answer" row
+        $("#questionRow").hide()
         $("#lastAnswerRow").show()
         $("#lastAnswerRow").removeClass("bounceOut")
         $("#lastAnswerRow").addClass("bounceIn")
-
+        
         //jQuery selector selecting buttons and writing the display names of the former question
         $("#lastAnswerNutrient").text(whichHasMore + " has more " + lastQuestionInfo.nutrient.replace("_", " "))
         $("#lastAnswerFoodA").text(lastQuestionInfo.foodA)
         $("#lastAnswerFoodAValue").text(Math.round(lastQuestionInfo.foodAValue, 2) + (lastQuestionInfo.nutrient == "Calories" ? " cal" : " g"))
         $("#lastAnswerFoodB").text(lastQuestionInfo.foodB)
         $("#lastAnswerFoodBValue").text(Math.round(lastQuestionInfo.foodBValue, 2) + (lastQuestionInfo.nutrient == "Calories" ? " cal" : " g"))
-
-        //generate and display new question
-        makeQuestion()
-    }, 1000);
-
-    //after 4 seconds
-    //question (nutrient, foodA, foodB) fades in again
-    setTimeout(function () {
-        //fade in new question
-        $("#nutrient").addClass("fadeIn")
-        $("#foodA").addClass("fadeIn")
-        $("#foodB").addClass("fadeIn")
-
-        //remove classes so you can put them next time an answer is clicked to replay the animation
-        $("#lastAnswerRow").removeClass("bounceIn")
-        $("#nutrient").removeClass("fadeOut")
-        $("#foodA").removeClass("fadeOut")
-        $("#foodB").removeClass("fadeOut")
-    }, 4000);
+    }, 600);
 
     //jQuery selector selecting buttons and writing the display names of the former question
     $("#lastAnswerNutrient").text(whichHasMore + " has more " + lastQuestionInfo.nutrient.replace("_", " "))
@@ -105,31 +94,9 @@ const getNewQuestion = (lastQuestionInfo) => {
     $("#lastAnswerFoodAValue").text(Math.round(lastQuestionInfo.foodAValue, 2))
     $("#lastAnswerFoodB").text(lastQuestionInfo.foodB)
     $("#lastAnswerFoodBValue").text(Math.round(lastQuestionInfo.foodBValue, 2))
-
-    //generate and display new question
-    makeQuestion()
-
-    //after 4 seconds
-    //question (nutrient, foodA, foodB) fades in again
-    setTimeout(function () {
-        //fade in new question
-        $("#nutrient").addClass("fadeIn")
-        $("#foodA").addClass("fadeIn")
-        $("#foodB").addClass("fadeIn")
-
-        //remove classes so you can put them next time an answer is clicked to replay the animation
-        $("#lastAnswerRow").removeClass("bounceIn")
-        $("#nutrient").removeClass("fadeOut")
-        $("#foodA").removeClass("fadeOut")
-        $("#foodB").removeClass("fadeOut")
-    }, 2500);
 }
-
 ////////////////////////////////////////////////////////////////////////////////////////////
 //any code written after this runs once when user arrives, because it's in the global scope 
-
-//initially hides "answer" row
-$("#lastAnswerRow").hide()
 
 //generates first question
 makeQuestion()

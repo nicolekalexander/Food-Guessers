@@ -16,73 +16,73 @@ body {
 
 #lastAnswerRow {
     color: rgb(204, 13, 179);
-    font-family: "Lemonada", cursive;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
 #lastAnswerFoodA {
     color:rgb(108, 195, 213);
-    font-family: "Dancing Script", cursive;
+    font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
     font-size: 20px;
 }
 #lastAnswerFoodB {
     color:rgb(241, 67, 96);
-    font-family: "Dancing Script", cursive;
+    font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
     font-size: 20px;
 }
 
 #lastAnswerNutrient {
-    font-family: "Lemonada", cursive;
+    font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
     font-style: italic;
     font-size: 14px;
     color: rgb(255, 120, 81);
 }
 p#lastAnswerFoodAValue {
-    font-family: "Dancing Script", cursive;
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
 }
 
 p#lastAnswerFoodBValue {
-    font-family: "Dancing Script", cursive;
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
 }
 
 #nutrient {
-    font-family: "Dancing Script", cursive;
+    font-family: 'Montserrat', sans-serif;
     font-style: italic;
     font-weight: lighter;
     font-size: 35px;
 }
 .AnswerPortion {
     color: rgb(86, 204, 157);
-    font-family: "Dancing Script", cursive;
+    font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: bold;
 }
 
 button#foodA {
-    font-family: "Lemonada", cursive;
+   font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
     font-size: 12px; 
     font-style: italic;
 }
 
 button#foodB {
-    font-family: "Lemonada", cursive;
+   font-family: 'Montserrat', sans-serif;
     font-weight: lighter;
     font-size: 12px;
     font-style: italic;
 }
 
 .display-4 {
-    font-family: "Lemonada", cursive;
+   font-family: 'Montserrat', sans-serif;
     font-size: 45px;    
 }
 
 #data-link {
-    font-family: "Lemonada" cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
